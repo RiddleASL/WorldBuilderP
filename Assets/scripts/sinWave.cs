@@ -18,7 +18,7 @@ public class sinWave : MonoBehaviour
     void Update()
     {
         a += .2f;
-        transform.position += Vector3.up * (Mathf.Sin(Mathf.Deg2Rad * a)/2000);
+        transform.position += Vector3.up * (Mathf.Sin(Mathf.Deg2Rad * a)/2500);
 
         mat.mainTextureOffset += new Vector2(waveSpeed * Time.deltaTime, 0);
     }

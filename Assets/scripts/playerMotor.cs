@@ -9,6 +9,8 @@ public class playerMotor : MonoBehaviour
 
     Vector3 movement;
     public float speed;
+    public GameObject GFX;
+    public float rotSpeed;
     
     public Transform groundCheck;
     public float checkR = .2f;
@@ -19,6 +21,7 @@ public class playerMotor : MonoBehaviour
     public float gravMod = 1;
     float yVel;
     public float jumpForce = 5f;
+    
     
     [HideInInspector] public bool canTele;
 
@@ -56,6 +59,13 @@ public class playerMotor : MonoBehaviour
 
         if(!isGrounded){
             yVel -= gravity * gravMod * Time.deltaTime;
+        }
+
+        //GFX
+        Vector3 gfx = new Vector3(movement.x, 0, movement.z);
+        if(gfx != Vector3.zero){
+            Quaternion toRot = Quaternion.LookRotation(gfx.normalized);
+            GFX.transform.rotation = Quaternion.RotateTowards(GFX.transform.rotation, toRot, rotSpeed);
         }
     }
 }
