@@ -7,7 +7,7 @@ public class playerMotor : MonoBehaviour
 {
     [HideInInspector] public CharacterController con;
 
-    Vector3 movement;
+    [HideInInspector] public Vector3 movement;
     public float speed;
     public GameObject GFX;
     public float rotSpeed;
@@ -38,6 +38,7 @@ public class playerMotor : MonoBehaviour
         //groundCheck
         if(Physics.CheckSphere(groundCheck.position,checkR, ground) && yVel <= 0){
             isGrounded = true;
+            yVel = 0;
         } else{
             isGrounded = false;
         }

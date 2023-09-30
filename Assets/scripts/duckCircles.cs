@@ -8,10 +8,13 @@ public class duckCircles : MonoBehaviour
     public float size = 1f;
     public float speed = .5f;
 
+    public GameObject quack;
+    float timer;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        timer = Random.Range(0f, 15f);
     }
 
     // Update is called once per frame
@@ -24,5 +27,11 @@ public class duckCircles : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(dir);
 
         Debug.DrawRay(transform.position, dir);
+
+        if(timer > 20){
+            Instantiate(quack, transform.position, transform.rotation);
+            timer = Random.Range(0f, 15f);
+        }
+        timer += Time.deltaTime;
     }
 }
