@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5abf472d88fcd7f4ba4acfa49fabeeef
+guid: c761830df92d97f4bbe9dedffb67f545
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -8,37 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.001
-    second: {fileID: 2100000, guid: d893566c0457ff94cb1b4326b83f4fdf, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.002
-    second: {fileID: 2100000, guid: 1db7ee687b9a71944b4968825196cead, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: acb544068ff0b81498dec4097365fa88, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.004
-    second: {fileID: 2100000, guid: 64f75f1c37d89a1409d8e98cb8384e3b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.005
-    second: {fileID: 2100000, guid: bbf433b48b6afe247b4f5d91375b2919, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.006
-    second: {fileID: 2100000, guid: 2b7be47102d4a6943ad526574d4d0b22, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.007
-    second: {fileID: 2100000, guid: 7053d8927f13c524c9df64c745c557c5, type: 2}
+    second: {fileID: 2100000, guid: 8832c63ab421e914498be26b7b218329, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -70,7 +40,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.7
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -123,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.7
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
