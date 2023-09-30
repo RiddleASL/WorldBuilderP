@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class playerMotor : MonoBehaviour
 {
-    CharacterController con;
+    [HideInInspector] public CharacterController con;
 
     Vector3 movement;
     public float speed;
@@ -20,12 +20,13 @@ public class playerMotor : MonoBehaviour
     float yVel;
     public float jumpForce = 5f;
     
-
+    [HideInInspector] public bool canTele;
 
     // Start is called before the first frame update
     void Start()
     {
         con = GetComponent<CharacterController>();
+        canTele = true;
     }
 
     // Update is called once per frame
