@@ -53,7 +53,7 @@ public class playerMotor : MonoBehaviour
         con.Move(movement * Time.deltaTime);
 
         //Jump
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
+        if(Input.GetKey(KeyCode.Space) && isGrounded){
             isGrounded = false;
             yVel = jumpForce;
         }
@@ -66,7 +66,7 @@ public class playerMotor : MonoBehaviour
         Vector3 gfx = new Vector3(movement.x, 0, movement.z);
         if(gfx != Vector3.zero){
             Quaternion toRot = Quaternion.LookRotation(gfx.normalized);
-            GFX.transform.rotation = Quaternion.RotateTowards(GFX.transform.rotation, toRot, rotSpeed);
+            GFX.transform.rotation = Quaternion.RotateTowards(GFX.transform.rotation, toRot, rotSpeed * Time.deltaTime);
         }
     }
 }

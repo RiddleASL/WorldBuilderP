@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class playerCam : MonoBehaviour
@@ -23,6 +24,9 @@ public class playerCam : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
         target = defaultPos.position;
     }
@@ -30,9 +34,7 @@ public class playerCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Cam Pos
-        Vector3 lerp = Vector3.Lerp(transform.position, player.position, lerpT);
-        transform.position = lerp;
+        
 
         rotX += Input.GetAxis("Mouse X") * sensitivity;
         rotY -= Input.GetAxis("Mouse Y") * sensitivity;
@@ -51,6 +53,13 @@ public class playerCam : MonoBehaviour
             Debug.Log(2);
         }
 
+    }
+
+    void LateUpdate(){
         Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, target, lerpT);
+
+        //Cam Pos
+        Vector3 lerp = Vector3.Lerp(transform.position, player.position, lerpT);
+        transform.position = lerp;
     }
 }
